@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 export default function About() {
 
     return (
-        <Container>
+        <Container id='about'>
             <Row className='justify-content-center' style={{ textAlign: 'center' }}>
                 <Col xs={12} lg={8} className='border-secondary border-top'>
                     <h1>About Me</h1>

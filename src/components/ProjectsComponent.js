@@ -10,7 +10,7 @@ import RecipeScreenshot from '../img/Recipe-Screenshot.png';
 export default function Projects() {
 
     return (
-        <Container>
+        <Container id='projects'>
             <Row className='justify-content-center' style={{ textAlign: 'center' }}>
                 <Col xs={12} lg={8} className='border-secondary border-top'>
                     <h1>Projects</h1>
