@@ -6,15 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Headshot from '../img/Brian_Headshot_Square.JPG';
 
 export default function Introduction(props) {
-    const {
-        setHash,
-    } = props;
-
-    const scrollWithOffset = (el) => {
-        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        const yOffset = -55; 
-        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-    };
+    const { setHash } = props;
 
     return (
         <Container className='mb-2' style={{ textAlign: 'center' }}>

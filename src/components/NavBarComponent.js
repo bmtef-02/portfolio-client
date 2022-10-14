@@ -39,9 +39,8 @@ export default function NavBar(props) {
     return (
         <Navbar bg='dark' variant='dark' sticky='top'>
             <Navbar.Brand 
-                href='#' 
+                href='/' 
                 style={{ marginLeft: 25 }} 
-                onClick={(event) => setHash(event.target.hash)}
             >
                 Brian Jun
             </Navbar.Brand>
