@@ -11,14 +11,14 @@ export default function RecipeProject() {
 
     return (
         <Container>
-            <Row className='justify-content-center' style={{ textAlign: 'center' }}>
+            <Row className='justify-content-center text-center'>
                 <Col xs={12} lg={8}>
                     <h1>Recipe App</h1>
                 </Col>
             </Row>
             <Row className='justify-content-center'>
                 <Col xs={12} lg={8}>
-                    <Row style={{ textAlign: 'center' }}>
+                    <Row className='text-center'>
                         <Col xs={4}>
                             <h4>
                                 <a href='https://bmtef-02-recipe-app.netlify.app/' target='_blank'>Live</a>

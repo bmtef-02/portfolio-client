@@ -9,7 +9,7 @@ export default function Introduction(props) {
     const { setHash } = props;
 
     return (
-        <Container className='mb-2' style={{ textAlign: 'center' }}>
+        <Container className='mb-2 text-center'>
             <Row className='justify-content-center'>
                 <Col xs={12} md={8} lg={6} xl={4}>
                     <img

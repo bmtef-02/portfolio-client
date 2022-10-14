@@ -11,14 +11,14 @@ export default function CastingProject() {
 
     return (
         <Container>
-            <Row className='justify-content-center' style={{ textAlign: 'center' }}>
+            <Row className='justify-content-center text-center'>
                 <Col xs={12} lg={8}>
                     <h1>Casting Cards App</h1>
                 </Col>
             </Row>
             <Row className='justify-content-center'>
                 <Col xs={12} lg={8}>
-                    <Row style={{ textAlign: 'center' }}>
+                    <Row className='text-center'>
                         <Col xs={4}>
                             <h4>
                                 <a href='https://casting-card-client.netlify.app/' target='_blank'>Live</a>

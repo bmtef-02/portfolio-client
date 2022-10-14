@@ -7,7 +7,7 @@ export default function About() {
 
     return (
         <Container id='about'>
-            <Row className='justify-content-center' style={{ textAlign: 'center' }}>
+            <Row className='justify-content-center text-center'>
                 <Col xs={12} lg={8} className='border-secondary border-top'>
                     <h1>About Me</h1>
                 </Col>

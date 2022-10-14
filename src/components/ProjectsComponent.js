@@ -14,7 +14,7 @@ export default function Projects(props) {
 
     return (
         <Container id='projects'>
-            <Row className='justify-content-center' style={{ textAlign: 'center' }}>
+            <Row className='justify-content-center text-center'>
                 <Col xs={12} lg={8} className='border-secondary border-top'>
                     <h1>Projects</h1>
                 </Col>
@@ -25,7 +25,7 @@ export default function Projects(props) {
                     <p>Automatically gathers results of each NFL game and computes the point totals to determine the weekly winner.</p>
                 </Col>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/nfl' onClick={() => setHash(null)}>
+                    <Link to='/projects/nfl' onClick={() => setHash('projects-page')}>
                         <img
                             src={NFLScreenshot}
                             alt='NFL Screenshot'
@@ -40,7 +40,7 @@ export default function Projects(props) {
                     <p>A tool casting departments can use to create a grid of prospective contestants more efficiently.</p>
                 </Col>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/casting' onClick={() => setHash(null)}>
+                    <Link to='/projects/casting' onClick={() => setHash('projects-page')}>
                         <img
                             src={CastingCardsScreenshot}
                             alt='Casting Screenshot'
@@ -55,7 +55,7 @@ export default function Projects(props) {
                     <p>A minimalist and customizable recipe app that allows users to create and save their own recipes</p>
                 </Col>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/recipe' onClick={() => setHash(null)}>
+                    <Link to='/projects/recipe' onClick={() => setHash('projects-page')}>
                         <img
                             src={RecipeScreenshot}
                             alt='Recipe Screenshot'
