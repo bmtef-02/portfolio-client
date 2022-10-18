@@ -9,7 +9,7 @@ export default function Introduction(props) {
     const { setHash } = props;
 
     return (
-        <Container className='mb-2 text-center'>
+        <Container className='text-center' style={{ marginTop: 100, marginBottom: 200 }}>
             <Row className='justify-content-center'>
                 <Col xs={12} md={8} lg={6} xl={4}>
                     <img
@@ -18,12 +18,11 @@ export default function Introduction(props) {
                         height='200'
                         className='rounded-circle'
                     />
-                    <h4>Hello my name is...</h4>
+                    <h4 className='mt-4'>Hi, my name is</h4>
                     <h1>Brian Jun</h1>
-                    <p>Hello, my name is Brian. I am a coding bootcamp graduate seeking a full-stack developer role with knowledge in the MERN stack (MongoDB, Express.js, React.js, Node.js) along with Javascript, HTML and CSS.</p>
+                    <p className='fs-5 mb-4'>I am a software engineer seeking a full-stack developer role with knowledge in the MERN stack (MongoDB, Express.js, React.js, Node.js) along with Javascript, HTML and CSS.</p>
                     <Button 
-                        id='test'
-                        href='/#test'  // change this to another id tag in the DOM
+                        href='/#about'  // change this to another id tag in the DOM
                         variant='outline-dark' 
                         size='lg'
                         onClick={(event) => setHash('#about')}

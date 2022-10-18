@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Introduction from './IntroductionComponent';
 import About from './AboutComponent';
 import Projects from './ProjectsComponent';
-import NavBar from './NavBarComponent';
 
 export default function Homepage(props) {
 

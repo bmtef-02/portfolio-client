@@ -1,3 +1,8 @@
-/* .App {
-  text-align: center;
+.paragraph {
+    font-size: 17px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
 }
