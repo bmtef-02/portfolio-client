@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import NFLScreenshot from '../img/NFL-Pickems-Screenshot.png';
 import CastingCardsScreenshot from '../img/Casting-Cards-Screenshot.png';
 import RecipeScreenshot from '../img/Recipe-Screenshot.png';
@@ -36,6 +37,9 @@ export default function Projects(props) {
                         />
                     </Link>
                 </Col>
+                <Row className='justify-content-center pt-5' xs={2} md={3}>
+                    <Button href='/projects/nfl' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
+                </Row>
             </Row>
             <Row className='justify-content-center py-5'>
                 <Col xs={12} lg={8}>
@@ -54,6 +58,9 @@ export default function Projects(props) {
                         />
                     </Link>
                 </Col>
+                <Row className='justify-content-center pt-5' xs={2} md={3}>
+                    <Button href='/projects/casting' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
+                </Row>
             </Row>
             <Row className='justify-content-center py-5'>
                 <Col xs={12} lg={8}>
@@ -73,6 +80,9 @@ export default function Projects(props) {
                     </Link>
                     
                 </Col>
+                <Row className='justify-content-center pt-5' xs={2} md={3}>
+                    <Button href='/projects/recipe' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
+                </Row>
             </Row>
         </Container>
     );
