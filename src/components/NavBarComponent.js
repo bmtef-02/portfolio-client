@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -12,11 +12,24 @@ export default function NavBar(props) {
         homeIsActive,
     } = props;
 
+    const [expanded, setExpanded] = useState(false);
+
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        const yOffset = -70; 
+        let yOffset;
+        if (expanded) {
+            yOffset = -270; 
+        } else {
+            yOffset = -70; 
+        }
+        
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     };
+
+    const onClickNav = (event) => {
+        setHash(event.target.hash);
+        setExpanded(false)
+    }
 
     const styles = {
         aboutHashLink: {
@@ -54,7 +67,7 @@ export default function NavBar(props) {
     }
     
     return (
-        <Navbar bg='dark' variant='dark' sticky='top'>
+        <Navbar bg='dark' variant='dark' sticky='top' expand='md' expanded={expanded} onToggle={() => setExpanded(!expanded)}>
             <Navbar.Brand 
                 href='/' 
                 style={{ marginLeft: 25 }} 
@@ -68,7 +81,7 @@ export default function NavBar(props) {
                         to='/#'
                         scroll={el => scrollWithOffset(el)}
                         style={styles.homeHashLink}
-                        onClick={(event) => setHash(event.target.hash)}
+                        onClick={onClickNav}
                     >
                         Home
                     </HashLink>
@@ -76,7 +89,7 @@ export default function NavBar(props) {
                         to='/#about'
                         scroll={el => scrollWithOffset(el)}
                         style={styles.aboutHashLink}
-                        onClick={(event) => setHash(event.target.hash)}
+                        onClick={onClickNav}
                     >
                         About
                     </HashLink>
@@ -84,7 +97,7 @@ export default function NavBar(props) {
                         to='/#projects' 
                         scroll={el => scrollWithOffset(el)}
                         style={styles.projectsHashLink}
-                        onClick={(event) => setHash(event.target.hash)}
+                        onClick={onClickNav}
                     >
                         Projects
                     </HashLink>
@@ -92,7 +105,7 @@ export default function NavBar(props) {
                         to='/#contact' 
                         scroll={el => scrollWithOffset(el)}
                         style={styles.contactHashLink}
-                        onClick={(event) => setHash(event.target.hash)}
+                        onClick={onClickNav}
                     >
                         Contact
                     </HashLink>
