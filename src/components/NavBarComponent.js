@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-export default function NavBar(props) {
-    const { 
-        setHash,
-        aboutIsActive,
-        projIsActive,
-        contactIsActive,
-        homeIsActive,
-    } = props;
+export default function NavBar() {
 
+    const { pathname } = useLocation();
     const [expanded, setExpanded] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
     const scrollWithOffset = (el) => {
-        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
         let yOffset;
         if (expanded) {
             yOffset = -270; 
@@ -27,7 +23,6 @@ export default function NavBar(props) {
     };
 
     const onClickNav = (event) => {
-        setHash(event.target.hash);
         setExpanded(false)
     }
 
@@ -38,7 +33,7 @@ export default function NavBar(props) {
             padding: '10px 0px',
             color: 'white',
             height: '40px',
-            borderBottom: aboutIsActive ? '3px solid white' : '',
+            borderBottom: pathname === '/' && scrollPosition > 810 && scrollPosition < 1570 ? '3px solid white' : '',
         },
         projectsHashLink: {
             textDecoration: 'none',
@@ -46,7 +41,7 @@ export default function NavBar(props) {
             padding: '10px 0px',
             color: 'white',
             height: '40px',
-            borderBottom: projIsActive ? '3px solid white' : '',
+            borderBottom: pathname === '/' && scrollPosition > 1570 && scrollPosition < 2600 ? '3px solid white' : '',
         },
         contactHashLink: {
             textDecoration: 'none',
@@ -54,7 +49,7 @@ export default function NavBar(props) {
             padding: '10px 0px',
             color: 'white',
             height: '40px',
-            borderBottom: contactIsActive ? '3px solid white' : '',
+            borderBottom: pathname === '/' && scrollPosition > 2600 ? '3px solid white' : '',
         },
         homeHashLink: {
             textDecoration: 'none',
@@ -62,9 +57,18 @@ export default function NavBar(props) {
             padding: '10px 0px',
             color: 'white',
             height: '40px',
-            borderBottom: homeIsActive ? '3px solid white' : '',
+            borderBottom: pathname === '/' && scrollPosition < 810 ? '3px solid white' : '',
         }
     }
+
+    useEffect(() => {
+        const updatePosition = () => {
+            setScrollPosition(window.scrollY);
+        };
+
+        window.addEventListener('scroll', updatePosition);
+    }, [])
+    
     
     return (
         <Navbar bg='dark' variant='dark' sticky='top' expand='md' expanded={expanded} onToggle={() => setExpanded(!expanded)}>

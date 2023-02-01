@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,9 +10,7 @@ import RecipeScreenshot from '../img/Recipe-Screenshot.png';
 import '../App.css';
 
 
-export default function Projects(props) {
-
-    const { setHash } = props;
+export default function Projects() {
 
     return (
         <Container id='projects'>
@@ -23,34 +21,14 @@ export default function Projects(props) {
             </Row>
             <Row className='justify-content-center py-5'>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/nfl' onClick={() => setHash('projects-page')} className='project-link'>
-                        <h3>NFL Pick'ems Score Tracker App</h3>
-                        <p className='paragraph'>Automatically gathers results of each NFL game and computes the point totals to determine the weekly winner.</p>
-                    </Link>
-                </Col>
-                <Col xs={12} lg={8}>
-                    <Link to='/projects/nfl' onClick={() => setHash('projects-page')}>
-                        <img
-                            src={NFLScreenshot}
-                            alt='NFL Screenshot'
-                            width='100%'
-                        />
-                    </Link>
-                </Col>
-                <Row className='justify-content-center pt-5' xs={2} md={3}>
-                    <Button href='/projects/nfl' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
-                </Row>
-            </Row>
-            <Row className='justify-content-center py-5'>
-                <Col xs={12} lg={8}>
-                    <Link to='/projects/casting' onClick={() => setHash('projects-page')} className='project-link'>
+                    <Link to='/projects/casting' className='project-link'>
                         <h2>Casting Cards App</h2>
                         <p className='paragraph'>A tool casting departments can use to create a grid of prospective contestants more efficiently.</p>
                     </Link>
                     
                 </Col>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/casting' onClick={() => setHash('projects-page')}>
+                    <Link to='/projects/casting'>
                         <img
                             src={CastingCardsScreenshot}
                             alt='Casting Screenshot'
@@ -58,31 +36,34 @@ export default function Projects(props) {
                         />
                     </Link>
                 </Col>
-                <Row className='justify-content-center pt-5' xs={2} md={3}>
-                    <Button href='/projects/casting' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
-                </Row>
+                <Link to='/projects/casting' className='project-btn'>
+                    <Row className='justify-content-center pt-5' xs={2} md={3}>
+                        <Button variant='primary' size='lg'>Learn more</Button>
+                    </Row>
+                </Link>
             </Row>
             <Row className='justify-content-center py-5'>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/recipe' onClick={() => setHash('projects-page')} className='project-link'>
-                        <h2>Recipe App</h2>
-                        <p className='paragraph'>A minimalist and customizable recipe app that allows users to create and save their own recipes</p>
+                    <Link to='/projects/nfl' className='project-link'>
+                        <h3>NFL Pick'ems Score Tracker App</h3>
+                        <p className='paragraph'>Automatically gathers results of each NFL game and computes the point totals to determine the weekly winner.</p>
                     </Link>
-                    
                 </Col>
                 <Col xs={12} lg={8}>
-                    <Link to='/projects/recipe' onClick={() => setHash('projects-page')}>
+                    <Link to='/projects/nfl'>
                         <img
-                            src={RecipeScreenshot}
-                            alt='Recipe Screenshot'
+                            src={NFLScreenshot}
+                            alt='NFL Screenshot'
                             width='100%'
                         />
                     </Link>
-                    
                 </Col>
-                <Row className='justify-content-center pt-5' xs={2} md={3}>
-                    <Button href='/projects/recipe' variant='primary' size='lg' onClick={() => setHash('projects-page')}>Learn more</Button>
-                </Row>
+                <Link to='/projects/nfl' className='project-btn'>
+                    <Row className='justify-content-center pt-5' xs={2} md={3}>
+                        <Button variant='primary' size='lg'>Learn more</Button>
+                    </Row>
+                </Link>
+                
             </Row>
         </Container>
     );

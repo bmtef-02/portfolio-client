@@ -9,11 +9,9 @@ export default function Homepage(props) {
 
     return (
         <React.Fragment>
-            <Introduction 
-                setHash={setHash}
-            />
+            <Introduction setHash={setHash} />
             <About />
-            <Projects setHash={setHash} />
+            <Projects />
         </React.Fragment>
     );
 }

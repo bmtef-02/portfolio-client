@@ -6,10 +6,6 @@ import '../App.css';
 
 export default function NFLProject() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    })
-
     return (
         <Container>
             <Row className='justify-content-center text-center mt-5'>

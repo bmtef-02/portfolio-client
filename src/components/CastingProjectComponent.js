@@ -6,10 +6,6 @@ import '../App.css';
 
 export default function CastingProject() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    })
-
     return (
         <Container>
             <Row className='justify-content-center text-center mt-5'>
@@ -20,17 +16,17 @@ export default function CastingProject() {
             <Row className='justify-content-center my-4'>
                 <Col xs={12} lg={8}>
                     <Row className='text-center'>
-                        <Col xs={4}>
+                        <Col xs={12} sm={4}>
                             <h4>
                                 <a href='https://casting-card-client.netlify.app/' target='_blank'>Live</a>
                             </h4>
                         </Col>
-                        <Col xs={4}>
+                        <Col xs={12} sm={4}>
                             <h4>
                                 <a href='https://github.com/bmtef-02/casting-cards-react-to-print.git' target='_blank'>GitHub Frontend</a>
                             </h4>
                         </Col>
-                        <Col xs={4}>
+                        <Col xs={12} sm={4}>
                             <h4>
                                 <a href='https://github.com/bmtef-02/casting-cards-server.git' target='_blank'>GitHub Backend</a>
                             </h4>

@@ -5,9 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Headshot from '../img/Brian_Headshot_Square.JPG';
 
-export default function Introduction(props) {
-    const { setHash } = props;
-
+export default function Introduction() {
+    
     return (
         <Container className='text-center' style={{ marginTop: 100, marginBottom: 200 }}>
             <Row className='justify-content-center'>
@@ -25,7 +24,6 @@ export default function Introduction(props) {
                         href='/#about'  // change this to another id tag in the DOM
                         variant='outline-dark' 
                         size='lg'
-                        onClick={(event) => setHash('#about')}
                     >
                         Learn More
                     </Button>
